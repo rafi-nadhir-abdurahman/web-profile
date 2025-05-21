@@ -1,0 +1,138 @@
+:root {
+    --bg: #f0f0f0;
+    --card: #ffffff;
+    --text: #2d3436;
+    --link: #1e90ff;
+    --accent: #0984e3;
+  }
+  
+  body.dark {
+    --bg: #1e1e1e;
+    --card: #2c2c2c;
+    --text: #f1f1f1;
+    --link: #74b9ff;
+    --accent: #3498db;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  #darkModeToggle {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--card);
+    color: var(--text);
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transition: background 0.3s;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .profile-card {
+    background-color: var(--card);
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    padding: 35px;
+    max-width: 450px;
+    text-align: center;
+    transition: background 0.3s;
+    animation: fadeInUp 1s ease-in;
+  }
+  
+  .profile-image img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid var(--link);
+    margin-bottom: 15px;
+    transition: transform 0.3s;
+  }
+  .profile-image img:hover {
+    transform: scale(1.05);
+  }
+  
+  .name {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .school {
+    font-size: 1rem;
+    color: var(--accent);
+    margin-bottom: 15px;
+  }
+  
+  .bio {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .skills h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  
+  .skills ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .skills li {
+    margin-bottom: 6px;
+  }
+  
+  .social-links {
+    margin-top: 20px;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--link);
+    font-weight: 500;
+    transition: color 0.3s, transform 0.2s;
+  }
+  
+  .social-links a:hover {
+    color: var(--accent);
+    transform: translateY(-3px);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
